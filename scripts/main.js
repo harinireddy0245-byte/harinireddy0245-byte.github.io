@@ -1,35 +1,39 @@
 // Store a reference to the <h1> in a variable
 const myHeading = document.querySelector("h1");
+
 // Update the text content of the <h1>
-myHeading.textContent = "ROYAL CHALLENGES BENGALURU";
+myHeading.textContent = "ROYAL CHALLENGERS BENGALURU";
+
 const myImage = document.querySelector("img");
 
 myImage.addEventListener("click", () => {
   const mySrc = myImage.getAttribute("src");
+
   if (mySrc === "images/RCB3.jpeg") {
     myImage.setAttribute("src", "images/RCB2.jpeg");
   } else {
     myImage.setAttribute("src", "images/RCB3.jpeg");
   }
 });
-let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h1');
+
+let myButton = document.querySelector("button");
 
 function setUserName() {
-  let myName = prompt('Please enter your name.');
-  if(!myName) {
+  let myName = prompt("Please enter your name.");
+
+  if (!myName) {
     setUserName();
   } else {
-    localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
+    localStorage.setItem("name", myName);
+    myHeading.textContent = "RCB is cool, " + myName;
   }
 }
 
-if(!localStorage.getItem('name')) {
+if (!localStorage.getItem("name")) {
   setUserName();
 } else {
-  let storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Mozilla is cool, ' + storedName;
+  let storedName = localStorage.getItem("name");
+  myHeading.textContent = "RCB is cool, " + storedName;
 }
 
 myButton.addEventListener("click", () => {
