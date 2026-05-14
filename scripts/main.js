@@ -6,7 +6,7 @@ const myImage = document.querySelector("img");
 
 myImage.addEventListener("click", () => {
   const mySrc = myImage.getAttribute("src");
-  if (mySrc === "images/firefox-icon.png") {
+  if (mySrc === "images/RCB3.jpeg") {
     myImage.setAttribute("src", "images/RCB2.jpeg");
   } else {
     myImage.setAttribute("src", "images/RCB3.jpeg");
